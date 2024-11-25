@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Registered Users</h2>
+  
+    <div *ngIf="message" class="alert alert-danger">
+      {{ message }}
+    </div>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
